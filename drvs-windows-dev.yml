@@ -7,7 +7,7 @@
   - name: Ensure user dadmin is present
     ansible.windows.win_user:
       name: dadmin
-      password: Hell0World1
+      password: Hell0World2
       state: present
       groups:
       - Users
