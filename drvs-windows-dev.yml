@@ -1,0 +1,19 @@
+---
+
+- hosts: win
+  gather_facts: no
+  
+  tasks:
+  - name: Ensure user dadmin is present
+    ansible.windows.win_user:
+      name: dadmin
+      password: Hell0World1
+      state: present
+      groups:
+      - Users
+      
+  - name: Install Notepad PlusPlus
+    win_chocolatey:
+     name: notepadplusplus.install
+     state: present
+    
